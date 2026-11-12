@@ -113,6 +113,26 @@ if(l==pos){
     
 }
 
+//Tortoise and Hare algorithm using two pointer technique
+void showMiddleNode() {
+
+    if (head == null) {
+        System.out.println("List is empty");
+        return;
+    }
+
+    Node slow = head;
+    Node fast = head;
+
+    while (fast != null && fast.next != null) {
+
+        slow = slow.next;
+        fast = fast.next.next;
+    }
+
+    System.out.println("Middle element: " + slow.data);
+}
+
     // Display linked list
     void show() {
  
